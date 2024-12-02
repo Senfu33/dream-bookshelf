@@ -1,6 +1,99 @@
-div {
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
-div a {
-  margin: 10px;
+
+html {
+  line-height: 1;
 }
+
+ul {
+  list-style: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+select:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.breakpoints-test {
+  height: 80px;
+  width: 100%;
+  color: black;
+  background-color: red;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.breakpoints-test:after {
+  content: "THE OG";
+}
+@media (min-width: 1024px) {
+  .breakpoints-test {
+    background-color: aquamarine;
+  }
+  .breakpoints-test:after {
+    content: "Media-up";
+  }
+}
+@media (max-width: 767.98px) {
+  .breakpoints-test {
+    background-color: purple;
+  }
+  .breakpoints-test:after {
+    content: "Media-down";
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .breakpoints-test {
+    background-color: yellow;
+  }
+  .breakpoints-test:after {
+    content: "Media-between";
+  }
+}/*# sourceMappingURL=main.css.map */
