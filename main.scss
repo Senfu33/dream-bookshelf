@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-// @use "sass:math";
-
-// Mixins
-=======
 // @use "saas:math";
 
 //Mixins
->>>>>>> 3a17ebfb451a4dfa10e8c69a0246f756cd3d4598
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
@@ -23,11 +17,7 @@
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-<<<<<<< HEAD
-  @return if(breakpoint-min($name, $breakpoints)==null, '', '#{name}');
-=======
   @return if(breakpoint-min($name, $breakpoints)==null, '', '#{$name}');
->>>>>>> 3a17ebfb451a4dfa10e8c69a0246f756cd3d4598
 }
 
 // Responsive mixins
@@ -43,10 +33,6 @@
   @else {
     @content;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a17ebfb451a4dfa10e8c69a0246f756cd3d4598
 }
 
 @mixin media-down($name, $breakpoints: $grid-breakpoints) {
@@ -85,10 +71,6 @@
 }
 
 // Reset
-<<<<<<< HEAD
-
-=======
->>>>>>> 3a17ebfb451a4dfa10e8c69a0246f756cd3d4598
 * {
   margin: 0;
   padding: 0;
@@ -158,17 +140,6 @@ select {
 
 //Variables
 //Mixin screen sizes breakpoints
-<<<<<<< HEAD
-$grid-breakpoints: (
-  "xxs":360px,
-  "xs":576px,
-  "s":768px,
-  "m":992px,
-  "l":1024px,
-  "xl":1280px,
-  "xxl":1400px
-);
-=======
 $grid-breakpoints: ("xxs": 360px,
   "xs": 576px,
   "s":768px,
@@ -178,7 +149,6 @@ $grid-breakpoints: ("xxs": 360px,
   "xl": 1280px,
   "xxl": 1400px);
 
->>>>>>> 3a17ebfb451a4dfa10e8c69a0246f756cd3d4598
 
 //Breakpoints test
 .breakpoints-test {
@@ -187,7 +157,7 @@ $grid-breakpoints: ("xxs": 360px,
   color: black;
   background-color: red;
   font-size: 30px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
@@ -216,6 +186,77 @@ $grid-breakpoints: ("xxs": 360px,
 
     &:after {
       content: "Media-between";
+    }
+  }
+}
+
+//Hidden elements
+
+header {
+  display: none;
+}
+
+#welcomeStudents {
+  display: none;
+}
+
+//Hero Shot
+
+.hero-shot {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .hero-content {
+    width: auto;
+  }
+
+  #bg-rectangle,
+  #group-1,
+  #group-2,
+  #free-book,
+  #wherever,
+  #vector {
+    position: absolute;
+    z-index: 1;
+  }
+
+  #bg-rectangle {
+    top: 0;
+    right: 0;
+    height: auto;
+    top: 15px;
+    right: 10px;
+  }
+
+  #group-1 {
+    top: 220px;
+    right: 10px;
+  }
+
+  #group-2 {
+    left: 20px;
+    top: 400px;
+  }
+
+  #free-book {
+    top: 150px;
+    left: 240px;
+  }
+
+  #wherever {
+    top: 230px;
+    left: 320px;
+  }
+
+  #vector {
+    top: 30px;
+    right: 30px;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: rotate(360deg) scale(1.2);
     }
   }
 }
