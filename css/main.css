@@ -1,4 +1,70 @@
-* {
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Light.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraLight.woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Thin.woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("/fonts/LibreBaskerville-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../fonts/LibreBaskerville-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+* * {
   margin: 0;
   padding: 0;
   border: 0;
@@ -7,60 +73,51 @@
   vertical-align: baseline;
   box-sizing: border-box;
 }
-
-html {
+* html {
   line-height: 1;
 }
-
-ul {
+* ul {
   list-style: none;
 }
-
-a img {
+* a img {
   border: none;
 }
-
-article,
-footer,
-header,
-main,
-nav,
-section {
+* article,
+* footer,
+* header,
+* main,
+* nav,
+* section {
   display: block;
 }
-
-button {
+* button {
   background: none;
   border: none;
 }
-button:focus {
+* button:focus {
   outline: none;
   box-shadow: none;
 }
-button:active {
+* button:active {
   outline: none;
   box-shadow: none;
 }
-
-img {
+* img {
   max-width: 100%;
 }
-
-a {
+* a {
   color: initial;
   text-decoration: none;
 }
-
-select:focus {
+* select:focus {
   outline: none;
   box-shadow: none;
 }
-select:active {
+* select:active {
   outline: none;
   box-shadow: none;
 }
-
-.breakpoints-test {
+* .breakpoints-test {
   height: 80px;
   width: 100%;
   color: black;
@@ -70,30 +127,238 @@ select:active {
   justify-content: center;
   align-items: center;
 }
-.breakpoints-test:after {
+* .breakpoints-test:after {
   content: "THE OG";
 }
 @media (min-width: 1024px) {
-  .breakpoints-test {
+  * .breakpoints-test {
     background-color: aquamarine;
   }
-  .breakpoints-test:after {
+  * .breakpoints-test:after {
     content: "Media-up";
   }
 }
 @media (max-width: 767.98px) {
-  .breakpoints-test {
+  * .breakpoints-test {
     background-color: purple;
   }
-  .breakpoints-test:after {
+  * .breakpoints-test:after {
     content: "Media-down";
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .breakpoints-test {
+  * .breakpoints-test {
     background-color: yellow;
   }
-  .breakpoints-test::after {
+  * .breakpoints-test:after {
     content: "Media-between";
   }
+}
+* * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+* html {
+  line-height: 1;
+}
+* ul {
+  list-style: none;
+}
+* a img {
+  border: none;
+}
+* article,
+* footer,
+* header,
+* main,
+* nav,
+* section {
+  display: block;
+}
+* button {
+  background: none;
+  border: none;
+}
+* button:focus {
+  outline: none;
+  box-shadow: none;
+}
+* button:active {
+  outline: none;
+  box-shadow: none;
+}
+* img {
+  max-width: 100%;
+}
+* a {
+  color: initial;
+  text-decoration: none;
+}
+* select:focus {
+  outline: none;
+  box-shadow: none;
+}
+* select:active {
+  outline: none;
+  box-shadow: none;
+}
+* .breakpoints-test {
+  height: 80px;
+  width: 100%;
+  color: black;
+  background-color: red;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* .breakpoints-test:after {
+  content: "THE OG";
+}
+@media (min-width: 1024px) {
+  * .breakpoints-test {
+    background-color: aquamarine;
+  }
+  * .breakpoints-test:after {
+    content: "Media-up";
+  }
+}
+@media (max-width: 767.98px) {
+  * .breakpoints-test {
+    background-color: purple;
+  }
+  * .breakpoints-test:after {
+    content: "Media-down";
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * .breakpoints-test {
+    background-color: yellow;
+  }
+  * .breakpoints-test::after {
+    content: "Media-between";
+  }
+}
+* header {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+* header .burger-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(56%) saturate(57%) hue-rotate(205deg) brightness(113%) contrast(89%);
+}
+* .simona-section {
+  box-sizing: border-box;
+}
+* .simona-section .section-title {
+  text-align: center;
+  height: 75px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 50px;
+  color: #61072B;
+  line-height: 75px;
+  border-top: 2118px;
+  border-left: 470px;
+  text-transform: uppercase;
+}
+* .simona-section .container {
+  background-color: rgba(37, 67, 121, 0.8509803922);
+  border-radius: 30px 30px 150px 30px;
+  height: 673px;
+  width: 1210px;
+  display: flex;
+  margin-left: 140px;
+  margin-right: 120px;
+}
+* .image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+}
+* .image-container h1 {
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #E4CCFF;
+}
+* .image-container h1:hover {
+  opacity: 59%;
+}
+
+.logo-one {
+  width: 307.46px;
+  height: 307.46px;
+  top: 30px;
+  left: 20px;
+}
+.logo-one:hover {
+  filter: blur(5px);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-text:hover {
+  opacity: 1;
+}
+
+.logo-two {
+  width: 307.46px;
+  height: 307.46px;
+  top: 20px;
+  left: 20px;
+}
+.logo-two:hover {
+  filter: blur(5px);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-three {
+  width: 452.15px;
+  height: 307.46px;
+  top: 20px;
+  left: 20px;
+}
+.logo-three:hover {
+  filter: blur(5px);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-four {
+  width: 717.41px;
+  height: 180.11px;
+  top: 20px;
+  left: 20px;
+  margin-top: -70px;
+}
+.logo-four:hover {
+  filter: blur(5px);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-five {
+  width: 382.07px;
+  height: 180.11px;
+  top: 20px;
+  left: 20px;
+  margin-top: -70px;
+}
+.logo-five:hover {
+  filter: blur(5px);
+  transition: 0.3s ease;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
