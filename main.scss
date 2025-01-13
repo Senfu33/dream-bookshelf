@@ -244,6 +244,150 @@ header {
     }
   }
 
+}
+
+//Simona Section
+.simona-section {
+  $text-color: #61072B;
+  $background-color: #254379D9;
+  $hover-text-color: #E4CCFF;
+  $hover-background-color: #00000096;
+  $font-montserrat: $font-montserrat;
+  $font-libreBaskerville: $font-libreBaskerville;
+  box-sizing: border-box;
+
+
+  .section-title {
+    text-align: center;
+    height: 75px;
+    font-family: $font-montserrat;
+    font-weight: 600;
+    font-size: 50px;
+    color: $text-color;
+    line-height: 75px;
+    border-top: 2118px;
+    border-left: 470px;
+    text-transform: uppercase;
+  }
+
+
+  .container {
+    background-color: $background-color;
+    border-radius: 30px 30px 150px 30px;
+    height: 673px;
+    width: 1210px;
+    display: flex;
+    margin-left: 140px;
+    margin-right: 120px;
+
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+
+  }
+
+  .image-container h1 {
+    font-family: $font-montserrat;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #E4CCFF;
+
+    &:hover {
+      opacity: 59%;
+
+    }
+  }
+
+
+  .logo-one {
+    width: 307.46px;
+    height: 307.46px;
+    top: 30px;
+    left: 20px;
+
+    &:hover {
+      filter: blur(5px);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+  }
+
+  .hover-text {
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+
+  .logo-two {
+    width: 307.46px;
+    height: 307.46px;
+    top: 20px;
+    left: 20px;
+
+    &:hover {
+      filter: blur(5px);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+  }
+
+
+  .logo-three {
+    width: 452.15px;
+    height: 307.46px;
+    top: 20px;
+    left: 20px;
+
+    &:hover {
+      filter: blur(5px);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+  }
+
+
+  .logo-four {
+    width: 717.41px;
+    height: 180.11px;
+    top: 20px;
+    left: 20px;
+    margin-top: -70px;
+
+    &:hover {
+      filter: blur(5px);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+  }
+
+  .logo-five {
+    width: 382.07px;
+    height: 180.11px;
+    top: 20px;
+    left: 20px;
+    margin-top: -70px;
+
+    &:hover {
+      filter: blur(5px);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+  }
+}
+
+
   
 }
 
