@@ -1,5 +1,6 @@
 @font-face {
   font-family: "Montserrat";
+<<<<<<< HEAD
   src: url("../fonts/Montserrat-Black.woff2");
   font-weight: 900;
   font-style: normal;
@@ -38,6 +39,10 @@
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Light.woff2");
   font-weight: 300;
+=======
+  src: url("../fonts/Montserrat-Thin.woff2");
+  font-weight: 100;
+>>>>>>> main
   font-style: normal;
 }
 @font-face {
@@ -48,13 +53,58 @@
 }
 @font-face {
   font-family: "Montserrat";
+<<<<<<< HEAD
   src: url("../fonts/Montserrat-Thin.woff2");
   font-weight: 100;
+=======
+  src: url("../fonts/Montserrat-Light.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.woff2");
+  font-weight: 900;
+>>>>>>> main
   font-style: normal;
 }
 @font-face {
   font-family: "Libre Baskerville";
+<<<<<<< HEAD
   src: url("/fonts/LibreBaskerville-Regular.woff2");
+=======
+  src: url("../fonts/LibreBaskerville-Regular.woff2");
+>>>>>>> main
   font-weight: 400;
   font-style: normal;
 }
@@ -64,7 +114,11 @@
   font-weight: 700;
   font-style: normal;
 }
+<<<<<<< HEAD
 * * {
+=======
+* {
+>>>>>>> main
   margin: 0;
   padding: 0;
   border: 0;
@@ -117,16 +171,120 @@
   outline: none;
   box-shadow: none;
 }
+<<<<<<< HEAD
 * .breakpoints-test {
   height: 80px;
+=======
+
+header {
+  font-family: "Libre Baskerville";
+  font-weight: 500;
+}
+header .burger-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+}
+
+.hero-shot {
+  display: flex;
+  height: 100vh;
+>>>>>>> main
   width: 100%;
-  color: black;
-  background-color: red;
-  font-size: 30px;
+  position: relative;
+}
+.hero-shot .hero-content {
+  width: auto;
+}
+.hero-shot #bg-rectangle,
+.hero-shot #group-1,
+.hero-shot #group-2,
+.hero-shot #free-book,
+.hero-shot #wherever,
+.hero-shot #vector {
+  position: absolute;
+  z-index: 1;
+}
+.hero-shot #bg-rectangle {
+  top: 0;
+  right: 0;
+  height: auto;
+  top: 15px;
+  right: 10px;
+}
+.hero-shot #group-1 {
+  top: 220px;
+  right: 10px;
+}
+.hero-shot #group-2 {
+  left: 20px;
+  top: 400px;
+}
+.hero-shot #free-book {
+  top: 150px;
+  left: 240px;
+}
+.hero-shot #wherever {
+  top: 230px;
+  left: 320px;
+}
+.hero-shot #vector {
+  top: 30px;
+  right: 30px;
+  transition: transform 0.5s;
+}
+.hero-shot #vector:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.simona-section {
+  box-sizing: border-box;
+}
+.simona-section .section-title {
+  text-align: center;
+  height: 75px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 50px;
+  color: #61072B;
+  line-height: 75px;
+  border-top: 2118px;
+  border-left: 470px;
+  text-transform: uppercase;
+}
+.simona-section .container {
+  background-color: rgba(37, 67, 121, 0.8509803922);
+  border-radius: 30px 30px 150px 30px;
+  max-width: 1210px;
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+.simona-section .container .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.simona-section .container .image-container .logo-partner {
+  position: relative;
+}
+.simona-section .container .image-container .logo-partner .hover-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8196078431);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
 }
+<<<<<<< HEAD
 * .breakpoints-test:after {
   content: "THE OG";
 }
@@ -362,3 +520,98 @@
   transition: 0.3s ease;
   cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
+=======
+.simona-section .container .image-container .logo-partner .hover-text p {
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 600;
+  color: #E4CCFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.simona-section .container .image-container .logo-partner:hover .hover-text {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.simona-section .image-container h1 {
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #E4CCFF;
+}
+.simona-section .image-container h1:hover {
+  opacity: 59%;
+}
+
+.reviews-section {
+  text-align: center;
+  padding: 2rem;
+  /* Track */
+  /* Track */
+  /* Handle */
+}
+.reviews-section .section-title {
+  margin: 0 auto 5rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 75px;
+  color: #254379;
+}
+.reviews-section .slider-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1210px;
+  overflow-x: scroll !important;
+  /*  default skrien lizgac */
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  transition: overflow-x 0.3s ease;
+  -ms-overflow-style: none;
+}
+.reviews-section .slider-container::-webkit-scrollbar {
+  background: transparent;
+}
+.reviews-section .slider-container::-webkit-scrollbar-track {
+  background: red;
+}
+.reviews-section .slider-container::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.reviews-section .review-card {
+  background-color: rgba(37, 67, 121, 0.8509803922);
+  color: #e4ccff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  min-width: 331px;
+  height: 412px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.reviews-section .stars {
+  color: #C796FF;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transform-origin: center;
+  /* stavam tocka na rotacijata */
+  transform: rotateX(-10deg);
+  /* rotira na x osata (nagore */
+}
+.reviews-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #E4CCFF;
+}
+.reviews-section #name {
+  color: #BDE3FF;
+}
+>>>>>>> main
