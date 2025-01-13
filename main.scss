@@ -33,7 +33,6 @@
   @else {
     @content;
   }
-
 }
 
 @mixin media-down($name, $breakpoints: $grid-breakpoints) {
@@ -368,7 +367,7 @@ $grid-breakpoints: ("xxs": 360px,
   color: black;
   background-color: red;
   font-size: 30px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   
@@ -398,6 +397,70 @@ $grid-breakpoints: ("xxs": 360px,
   &:after {
     content: "Media-between";
   }
+}
+
+
+//Hero Shot
+
+.hero-shot {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .hero-content {
+    width: auto;
+  }
+
+  #bg-rectangle,
+  #group-1,
+  #group-2,
+  #free-book,
+  #wherever,
+  #vector {
+    position: absolute;
+    z-index: 1;
+  }
+
+  #bg-rectangle {
+    top: 0;
+    right: 0;
+    height: auto;
+    top: 15px;
+    right: 10px;
+  }
+
+  #group-1 {
+    top: 220px;
+    right: 10px;
+  }
+
+  #group-2 {
+    left: 20px;
+    top: 400px;
+  }
+
+  #free-book {
+    top: 150px;
+    left: 240px;
+  }
+
+  #wherever {
+    top: 230px;
+    left: 320px;
+  }
+
+  #vector {
+    top: 30px;
+    right: 30px;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+}
+
  }
 }
 
@@ -473,13 +536,5 @@ p {
 #name {
   color: #BDE3FF;
 }
-
-
-
-    
- 
-    
-
-
 
 
