@@ -71,6 +71,86 @@
   }
 }
 
+//Fonts
+//Monserrat
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraLight.woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraBold.woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Black.woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+//Libre Baskerville
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/LibreBaskerville-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/LibreBaskerville-Bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 // Reset
 * {
   margin: 0;
@@ -140,6 +220,9 @@ select {
 }
 
 //Variables
+//Fonts
+$font-montserrat: 'Montserrat';
+$font-libreBaskerville: 'Libre Baskerville';
 //Mixin screen sizes breakpoints
 $grid-breakpoints: ("xxs": 360px,
   "xs": 576px,
@@ -150,43 +233,15 @@ $grid-breakpoints: ("xxs": 360px,
   "xl": 1280px,
   "xxl": 1400px);
 
+header {
+  font-family: $font-libreBaskerville;
+  font-weight: 500;
 
-//Breakpoints test
-.breakpoints-test {
-  height: 80px;
-  width: 100%;
-  color: black;
-  background-color: red;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:after {
-    content: "THE OG";
-  }
-
-  @include media-up(l) {
-    background-color: aquamarine;
-
-    &:after {
-      content: "Media-up";
-    }
-  }
-
-  @include media-down(s) {
-    background-color: purple;
-
-    &:after {
-      content: "Media-down";
-    }
-  }
-
-  @include media-between(s, m) {
-    background-color: yellow;
-
-    &:after {
-      content: "Media-between";
+  .burger-btn {
+    &:hover {
+      img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+      }
     }
   }
 
