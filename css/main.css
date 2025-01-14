@@ -264,7 +264,6 @@ select:active {
   .breakpoints-test:after {
     content: "Media-between";
   }
-<<<<<<< HEAD
 }
 
 .reviews-section {
@@ -338,8 +337,7 @@ p {
 #name {
   color: #BDE3FF;
 }/*# sourceMappingURL=main.css.map */
-=======
-}/*# sourceMappingURL=main.css.map */
+
 
 header {
   font-family: "Libre Baskerville";
@@ -349,4 +347,3 @@ header .burger-btn:hover img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
 }
 
->>>>>>> 99f429762c369064361747487b660b25c6484cea
