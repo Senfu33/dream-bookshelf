@@ -235,11 +235,41 @@ $grid-breakpoints: ("xxs": 360px,
 header {
   font-family: $font-libreBaskerville;
   font-weight: 500;
+  position: absolute;
+  height: 100vh;
+  background-color: #BECFBC;
+  z-index: 28;
+  border-bottom-right-radius: 30px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    @include media-up(l) {
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
 
   .burger-btn {
+    margin-top: 30px;
+
     &:hover {
       img {
         filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+      }
+    }
+  }
+
+  .burger-menu {
+    .search {
+      form {
+        background-color: #e8e8e8;
+        border-radius: 30px;
+        padding: 5px 10px;
+        box-shadow: -2px -2px 4px -1px#f9f9f9, 2px 3px 4px -1px #00000085;
       }
     }
   }
@@ -433,8 +463,8 @@ header {
     transition: transform 0.3s ease;
     -ms-overflow-style: none;
     height: 460px;
-    
-    
+
+
   }
 
   .slider-container::-webkit-scrollbar {
@@ -443,7 +473,7 @@ header {
 
   .review-card {
     background-color: #254379D9;
-    color: #e4ccff;    
+    color: #e4ccff;
     border-radius: 30px;
     min-width: 331px;
     height: auto;
@@ -451,12 +481,12 @@ header {
     display: flex;
     flex-direction: column;
     border: 1px solid #C796FF;
-    
+
 
     img {
       margin: 0 auto;
       margin-top: 11px;
-      
+
     }
 
     p {
@@ -464,8 +494,8 @@ header {
       margin: 50px 37px;
       font-size: 1rem;
       line-height: 1.6;
-      color: #E4CCFF; 
-      opacity: 0.9; 
+      color: #E4CCFF;
+      opacity: 0.9;
     }
 
     .review-name {
@@ -475,4 +505,3 @@ header {
     }
   }
 }
-
