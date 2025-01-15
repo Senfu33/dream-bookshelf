@@ -234,11 +234,41 @@ $grid-breakpoints: ("xxs": 360px,
 header {
   font-family: $font-libreBaskerville;
   font-weight: 500;
+  position: absolute;
+  height: 100vh;
+  background-color: #BECFBC;
+  z-index: 28;
+  border-bottom-right-radius: 30px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    @include media-up(l) {
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
 
   .burger-btn {
+    margin-top: 30px;
+
     &:hover {
       img {
         filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+      }
+    }
+  }
+
+  .burger-menu {
+    .search {
+      form {
+        background-color: #e8e8e8;
+        border-radius: 30px;
+        padding: 5px 10px;
+        box-shadow: -2px -2px 4px -1px#f9f9f9, 2px 3px 4px -1px #00000085;
       }
     }
   }
@@ -406,21 +436,18 @@ header {
 
 }
 
-
-
 .reviews-section {
   text-align: center;
   padding: 2rem;
 
   .section-title {
     margin: 0 auto 5rem;
-    font-family: 'Montserrat';
+    font-family: $font-montserrat;
     font-weight: 600;
     font-size: 50px;
     line-height: 75px;
     color: #254379;
   }
-
 
   .slider-container {
     display: flex;
@@ -428,62 +455,53 @@ header {
     gap: 2rem;
     width: 100%;
     max-width: 1210px;
-    overflow-x: scroll !important;
-    /*  default skrien lizgac */
+    overflow-x: auto;
     margin: 0 auto;
     padding-bottom: 1rem;
     scroll-behavior: smooth;
-    transition: overflow-x 0.3s ease;
+    transition: transform 0.3s ease;
     -ms-overflow-style: none;
+    height: 460px;
+
 
   }
 
-  /* Track */
   .slider-container::-webkit-scrollbar {
-    background: transparent;
-  }
-
-  /* Track */
-  .slider-container::-webkit-scrollbar-track {
-    background: red;
-  }
-
-  /* Handle */
-  .slider-container::-webkit-scrollbar-thumb {
-    background: transparent;
+    display: none;
   }
 
   .review-card {
     background-color: #254379D9;
     color: #e4ccff;
-    padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 30px;
     min-width: 331px;
-    height: 412px;
+    height: auto;
     text-align: left;
     display: flex;
     flex-direction: column;
-  }
+    border: 1px solid #C796FF;
 
-  .stars {
-    color: #C796FF;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    transform-origin: center;
-    /* stavam tocka na rotacijata */
-    transform: rotateX(-10deg);
-    /* rotira na x osata (nagore */
-  }
 
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #E4CCFF;
-  }
+    img {
+      margin: 0 auto;
+      margin-top: 11px;
 
-  #name {
-    color: #BDE3FF;
+    }
+
+    p {
+      font-family: $font-montserrat;
+      margin: 50px 37px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #E4CCFF;
+      opacity: 0.9;
+    }
+
+    .review-name {
+      color: #BDE3FF;
+      display: block;
+      margin-top: -49px;
+    }
   }
 
   @else {

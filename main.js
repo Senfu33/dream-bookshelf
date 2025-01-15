@@ -7,3 +7,8 @@ console.log(welcomeStudents.innerHTML + "From the Console");
 //Changing html with js
 setTimeout(function() {welcomeStudents.innerHTML = "Changing text from JS"}, 5000)
 
+const sliderContainer = document.querySelector('.slider-container');
+window.onscroll = () => {
+    sliderContainer.style.left = `${-window.scrollx}px`
+}
+
