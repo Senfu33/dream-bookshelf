@@ -129,9 +129,32 @@ select:active {
 header {
   font-family: "Libre Baskerville";
   font-weight: 500;
+  position: absolute;
+  height: 100vh;
+  background-color: #BECFBC;
+  z-index: 28;
+  border-bottom-right-radius: 30px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  header .logo img {
+    width: 150px;
+    height: auto;
+  }
+}
+header .burger-btn {
+  margin-top: 30px;
 }
 header .burger-btn:hover img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+}
+header .burger-menu .search form {
+  background-color: #e8e8e8;
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: -2px -2px 4px -1px #f9f9f9, 2px 3px 4px -1px rgba(0, 0, 0, 0.5215686275);
 }
 
 .hero-shot {
@@ -309,10 +332,10 @@ header .burger-btn:hover img {
   font-size: 1rem;
   line-height: 1.6;
   color: #E4CCFF;
-  opacity: 0.9; /* Primerna vrednost */
+  opacity: 0.9;
 }
 .reviews-section .review-card .review-name {
   color: #BDE3FF;
   display: block;
   margin-top: -49px;
-}/*# sourceMappingURL=main.css.map */
+}
