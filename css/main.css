@@ -262,9 +262,6 @@ header .burger-btn:hover img {
 .reviews-section {
   text-align: center;
   padding: 2rem;
-  /* Track */
-  /* Track */
-  /* Handle */
 }
 .reviews-section .section-title {
   margin: 0 auto 5rem;
@@ -280,49 +277,42 @@ header .burger-btn:hover img {
   gap: 2rem;
   width: 100%;
   max-width: 1210px;
-  overflow-x: scroll !important;
-  /*  default skrien lizgac */
+  overflow-x: auto;
   margin: 0 auto;
   padding-bottom: 1rem;
   scroll-behavior: smooth;
-  transition: overflow-x 0.3s ease;
+  transition: transform 0.3s ease;
   -ms-overflow-style: none;
+  height: 460px;
 }
 .reviews-section .slider-container::-webkit-scrollbar {
-  background: transparent;
-}
-.reviews-section .slider-container::-webkit-scrollbar-track {
-  background: red;
-}
-.reviews-section .slider-container::-webkit-scrollbar-thumb {
-  background: transparent;
+  display: none;
 }
 .reviews-section .review-card {
   background-color: rgba(37, 67, 121, 0.8509803922);
   color: #e4ccff;
-  padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 30px;
   min-width: 331px;
-  height: 412px;
+  height: auto;
   text-align: left;
   display: flex;
   flex-direction: column;
+  border: 1px solid #C796FF;
 }
-.reviews-section .stars {
-  color: #C796FF;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  transform-origin: center;
-  /* stavam tocka na rotacijata */
-  transform: rotateX(-10deg);
-  /* rotira na x osata (nagore */
+.reviews-section .review-card img {
+  margin: 0 auto;
+  margin-top: 11px;
 }
-.reviews-section p {
+.reviews-section .review-card p {
+  font-family: "Montserrat";
+  margin: 50px 37px;
   font-size: 1rem;
   line-height: 1.6;
   color: #E4CCFF;
+  opacity: 0.9; /* Primerna vrednost */
 }
-.reviews-section #name {
+.reviews-section .review-card .review-name {
   color: #BDE3FF;
-}
+  display: block;
+  margin-top: -49px;
+}/*# sourceMappingURL=main.css.map */
