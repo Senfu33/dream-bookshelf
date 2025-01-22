@@ -1288,24 +1288,90 @@ header {
 
 }
 
+
+//Newsletter
+.newsletter-section {
+  display: flex;
+  width: calc(100% - 20vw);
+  align-items: center;
+  margin: 50px 10vw;
+
+  .newsletter {
+    position: relative;
+
+    form {
+      background-color: #E8E8E8;
+      box-shadow: -2px -2px 3px -1px #f9f9f9, 2px 3px 4px -1px #00000025;
+      max-width: 500px;
+      font-family: $font-montserrat;
+      border-radius: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 40px;
+      right: -10%;
+
+      input {
+        font-size: 15px;
+        font-weight: 400;
+        color: #61072B;
+        background-color: transparent;
+        padding: 15px;
+
+        &::placeholder {
+          color: #C70E58;
+        }
+      }
+
+      button {
+        background: linear-gradient(48deg, rgba(97, 7, 43, 1) 0%, rgba(199, 14, 88, 1) 81%);
+        color: #F9F9F9;
+        text-transform: uppercase;
+        font-weight: 600;
+        height: 50px;
+        padding: 0 30px;
+        border-radius: 30px;
+        transition: background-color .75s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+
+        &:hover {
+          background: linear-gradient(48deg, rgba(97, 7, 43, 1) 60%, rgba(199, 14, 88, 1) 90%);
+          transition: background-color .75s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+      }
+    }
+  }
+}
+
 //Footer
 footer {
   background: linear-gradient(to left,
       rgba(37, 67, 121, 1),
       rgba(70, 95, 141, 1),
       rgba(38, 67, 120, 0.4));
-  padding: 40px 20px;
-  height: 300px;
+  overflow-x: hidden;
+
+
+  .footer-decoration {
+    width: 110vw;
+
+    img {
+      width: 100%;
+    }
+  }
 
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20%;
     margin: 0 auto;
     max-width: 1200px;
+    padding: 40px 20px;
+    font-family: $font-montserrat;
 
     .footer-section {
-      flex: 1 1 200px;
       margin: 10px;
 
       h4 {
@@ -1314,6 +1380,7 @@ footer {
         color: $title-color;
         text-transform: uppercase;
         font-weight: 800;
+        letter-spacing: 1px;
       }
 
       ul {
@@ -1329,7 +1396,7 @@ footer {
             transition: color 0.3s ease;
 
             &:hover {
-              color: rgb(187, 0, 255);
+              color: #C796FF;
             }
           }
         }
@@ -1344,8 +1411,7 @@ footer {
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
           &:hover {
-            transform: scale(1.1);
-            filter: brightness(0) saturate(100%) invert(21%) sepia(85%) saturate(4588%) hue-rotate(278deg) brightness(82%) contrast(95%);
+            filter: brightness(0) saturate(100%) invert(80%) sepia(59%) saturate(4089%) hue-rotate(211deg) brightness(99%) contrast(105%);
             cursor: pointer;
           }
         }
@@ -1355,7 +1421,6 @@ footer {
     .connect-download {
       display: flex;
       flex-direction: column;
-      flex: 1 1 300px;
       margin: 10px;
 
       .social-icons {
@@ -1412,101 +1477,6 @@ footer {
 
         .app-links {
           margin-top: 30px;
-        }
-      }
-    }
-  }
-}
-
-//Newsletter
-.newsletter-section {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-
-  .explore {
-    max-width: 1280px;
-    padding: 30px;
-  }
-
-  .newsletter {
-    position: relative;
-    width: auto;
-
-    #rec-48 {
-      position: relative;
-      z-index: 1;
-      width: 960px;
-      height: 350px;
-      padding: 50px;
-    }
-
-    #group-8,
-    #get-notified {
-      position: absolute;
-      z-index: 2;
-    }
-
-    #group-8 {
-      top: 75px;
-      left: 50px;
-      width: 300px;
-    }
-
-    #get-notified {
-      top: 86px;
-      left: 270px;
-      width: 550px;
-    }
-
-    .search-container {
-      position: absolute;
-      top: 220px;
-      right: 20px;
-      z-index: 2;
-
-      #search-bar-image {
-        width: 414px;
-        height: 50px;
-        border-radius: 30px;
-        object-fit: cover;
-      }
-
-      #search-input {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        padding: 12px 40px 12px 16px;
-        font-size: 16px;
-        border: none;
-        outline: none;
-        background: transparent;
-        color: #333;
-        width: 250px;
-        border-radius: 30px;
-        z-index: 3;
-
-        &::placeholder {
-          color: #850035;
-        }
-      }
-
-      #search-btn {
-        position: absolute;
-        top: -3px;
-        right: 0;
-        cursor: pointer;
-
-        img {
-          width: 155px;
-          height: 57px;
-        }
-
-        &:hover {
-          opacity: 0.8;
         }
       }
     }
