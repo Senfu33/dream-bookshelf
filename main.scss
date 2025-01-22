@@ -1,17 +1,13 @@
 // @use "saas:math";
 
 //Mixins
-@function breakpoint-next(
-  $name,
+@function breakpoint-next($name,
   $breakpoints: $grid-breakpoints,
-  $breakpoint-names: map-keys($breakpoints)
-) {
+  $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
-  @return if(
-    $n < length($breakpoint-names),
+  @return if($n < length($breakpoint-names),
     nth($breakpoint-names, $n + 1),
-    null
-  );
+    null);
 }
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
@@ -25,8 +21,9 @@
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) ==null, "", "#{$name}");
+  @return if(breakpoint-min($name, $breakpoints)==null, "", "#{$name}");
 }
+
 // Responsive mixins
 @mixin media-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
@@ -35,7 +32,9 @@
     @media (min-width: $min) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @content;
   }
 }
@@ -49,7 +48,9 @@
     @media (max-width: $current-max) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @content;
   }
 }
@@ -64,7 +65,9 @@
     @media (min-width: $min) and (max-width: $current-upper-max) {
       @content;
     }
-  } @else if $min==null {
+  }
+
+  @else if $min==null {
     @include media-down($upper, $breakpoints) {
       @content;
     }
@@ -220,12 +223,18 @@ select {
 }
 
 //Variables
+$text-color: #61072B;
+$background-color: #254379D9;
+$hover-text-color: #E4CCFF;
+$hover-background-color: #00000096;
+$title-color: #f9f9f9;
+$link-color: #e4ccff;
+
 //Fonts
 $font-montserrat: "Montserrat";
 $font-libreBaskerville: "Libre Baskerville";
 //Mixin screen sizes breakpoints
-$grid-breakpoints: (
-  "xxs": 360px,
+$grid-breakpoints: ("xxs": 360px,
   "xs": 576px,
   "s": 768px,
   "m": 992px,
@@ -261,8 +270,7 @@ header {
 
     &:hover {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(1%)
-          saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
       }
     }
   }
@@ -340,13 +348,7 @@ header {
 }
 
 // <!-- Veronika part strat-->
-// ---------------
-$text-color: #61072B;
-$background-color: #254379D9;
-$hover-text-color: #E4CCFF;
-$hover-background-color: #00000096;
-$font-montserrat: $font-montserrat;
-$font-libreBaskerville: $font-libreBaskerville;
+
 
 .slider-wrapper {
   margin: 300px 5px 150px;
@@ -356,151 +358,151 @@ $font-libreBaskerville: $font-libreBaskerville;
 
 
 
-//   .variant1 {
-//     justify-content: center;
-//     overflow: hidden;
-//     scroll-behavior: smooth;
-//     list-style: none;
-//     flex-wrap: nowrap;
-//     color: rgb(84, 44, 122);
-//     // display: flex;
-//     display: flex;
-//     align-self: flex-start;
+  //   .variant1 {
+  //     justify-content: center;
+  //     overflow: hidden;
+  //     scroll-behavior: smooth;
+  //     list-style: none;
+  //     flex-wrap: nowrap;
+  //     color: rgb(84, 44, 122);
+  //     // display: flex;
+  //     display: flex;
+  //     align-self: flex-start;
 
-//     #img-1 {
-//       position: relative;
-//       z-index: 5;
-//       left: 100px;
-//      top: 5px;
-//       height: 590px !important;
-//       width: 320px;
-//       #i1 {
-//         width: 320px;
-//         height: 540px;
-//       }
+  //     #img-1 {
+  //       position: relative;
+  //       z-index: 5;
+  //       left: 100px;
+  //      top: 5px;
+  //       height: 590px !important;
+  //       width: 320px;
+  //       #i1 {
+  //         width: 320px;
+  //         height: 540px;
+  //       }
 
-//       &:hover .hover-part img {
-//         opacity: 1;
-//         width: 40px;
-//       }
+  //       &:hover .hover-part img {
+  //         opacity: 1;
+  //         width: 40px;
+  //       }
 
-//       &:hover .hover-part2 p {
-//         display: block;
-//         font-size: 23px;
-//         width: 320px;
-//         bottom: 47px;
-//         transition: all 0.1s ease-in;
-//       }
+  //       &:hover .hover-part2 p {
+  //         display: block;
+  //         font-size: 23px;
+  //         width: 320px;
+  //         bottom: 47px;
+  //         transition: all 0.1s ease-in;
+  //       }
 
-//     }
+  //     }
 
-//     #img-2 {
-//       position: relative;
-//       z-index: 4;
-//       left: 60px;
-//       top: 110px;
-//       height: 400px;
+  //     #img-2 {
+  //       position: relative;
+  //       z-index: 4;
+  //       left: 60px;
+  //       top: 110px;
+  //       height: 400px;
 
-//       &:hover .hover-part img {
-//         opacity: 1;
-//       }
+  //       &:hover .hover-part img {
+  //         opacity: 1;
+  //       }
 
-//       &:hover .hover-part2 p {
-//         display: block;
-//       }
-//     }
+  //       &:hover .hover-part2 p {
+  //         display: block;
+  //       }
+  //     }
 
-//     #img-3 {
-//       position: relative;
-//       z-index: 3;
-//       top: 80px;
-//       width: 260px;
-//       // bottom: 200px;
-//       height: 100px ;
-//       height: 100%;
-//   #i3 {
-//   height: 400px;
-// }
-// &:hover .hover-part img {
-//   opacity: 1;
-// }
+  //     #img-3 {
+  //       position: relative;
+  //       z-index: 3;
+  //       top: 80px;
+  //       width: 260px;
+  //       // bottom: 200px;
+  //       height: 100px ;
+  //       height: 100%;
+  //   #i3 {
+  //   height: 400px;
+  // }
+  // &:hover .hover-part img {
+  //   opacity: 1;
+  // }
 
-// &:hover .hover-part2 p {
-//   display: block;
-// }
-//     }
+  // &:hover .hover-part2 p {
+  //   display: block;
+  // }
+  //     }
 
-//     #img-4 {
-//       position: relative;
-//       z-index: 2;
-//       right: 60px;
-//       top: 50px;
-//       height: 400px;
+  //     #img-4 {
+  //       position: relative;
+  //       z-index: 2;
+  //       right: 60px;
+  //       top: 50px;
+  //       height: 400px;
 
-//       &:hover .hover-part img {
-//         opacity: 1;
-//       }
+  //       &:hover .hover-part img {
+  //         opacity: 1;
+  //       }
 
-//       &:hover .hover-part2 p {
-//         display: block;
-//       }
-//     }
+  //       &:hover .hover-part2 p {
+  //         display: block;
+  //       }
+  //     }
 
-//     #img-5 {
-//       position: relative;
-//       z-index: 1;
-//       right: 100px;
-//       top: 20px;
-//       height: 400px;
+  //     #img-5 {
+  //       position: relative;
+  //       z-index: 1;
+  //       right: 100px;
+  //       top: 20px;
+  //       height: 400px;
 
-//       &:hover .hover-part img {
-//         opacity: 1;
-//       }
+  //       &:hover .hover-part img {
+  //         opacity: 1;
+  //       }
 
-//       &:hover .hover-part2 p {
-//         display: block;
-//       }
-//     }
+  //       &:hover .hover-part2 p {
+  //         display: block;
+  //       }
+  //     }
 
-//     .hover-part {
-//       position: absolute;
-//       z-index: 4;
-//       right: 4px;
-//       margin: 10px 10px;
-//       top: 4px;
+  //     .hover-part {
+  //       position: absolute;
+  //       z-index: 4;
+  //       right: 4px;
+  //       margin: 10px 10px;
+  //       top: 4px;
 
 
-//       img {
-//         opacity: 0.01;
-//         border-radius: 10px;
-//         transition: all 0.2s ease-in;
+  //       img {
+  //         opacity: 0.01;
+  //         border-radius: 10px;
+  //         transition: all 0.2s ease-in;
 
-//       }
-//     }
+  //       }
+  //     }
 
-//     .hover-part2 {
-//       position: absolute;
-//       // z-index: 5;
+  //     .hover-part2 {
+  //       position: absolute;
+  //       // z-index: 5;
 
-//       p {
-//         opacity: 1;
-//         display: none ;
-//         font-family: $font-libreBaskerville;
-//         font-weight: 600;
-//         position: relative;
-//         padding: 10px;
-//         color: $hover-text-color;
-//         font-size: 18px;
-//         z-index: 5;
-//         bottom: 40px;
-//         width: 260px;
-//         background-color: #61072B;
-//         border-radius: 0 0 30px 30px;
-//         text-align: center;
-//         transition: all 0.2s ease-in;
-//       }
-//     }
-//   }
+  //       p {
+  //         opacity: 1;
+  //         display: none ;
+  //         font-family: $font-libreBaskerville;
+  //         font-weight: 600;
+  //         position: relative;
+  //         padding: 10px;
+  //         color: $hover-text-color;
+  //         font-size: 18px;
+  //         z-index: 5;
+  //         bottom: 40px;
+  //         width: 260px;
+  //         background-color: #61072B;
+  //         border-radius: 0 0 30px 30px;
+  //         text-align: center;
+  //         transition: all 0.2s ease-in;
+  //       }
+  //     }
+  //   }
 
   // .variant2 {
   //   justify-content: center;
@@ -762,7 +764,7 @@ $font-libreBaskerville: $font-libreBaskerville;
 
       p {
         opacity: 1;
-        display: none ;
+        display: none;
         font-family: $font-libreBaskerville;
         font-weight: 600;
         position: relative;
@@ -779,6 +781,7 @@ $font-libreBaskerville: $font-libreBaskerville;
       }
     }
   }
+
   // .variant4 {
   //   justify-content: center;
   //   overflow: hidden;
@@ -1089,8 +1092,7 @@ $font-libreBaskerville: $font-libreBaskerville;
   }
 }
 
-
- /* .slide-arrow {
+/* .slide-arrow {
    position: absolute;
    display: flex;
    top: 0;
@@ -1107,7 +1109,7 @@ $font-libreBaskerville: $font-libreBaskerville;
    transition: opacity 100ms;
  } */
 
- /* .slide-arrow:hover,
+/* .slide-arrow:hover,
  .slide-arrow:focus {
    opacity: 1;
  }
@@ -1124,10 +1126,7 @@ $font-libreBaskerville: $font-libreBaskerville;
    border-radius: 2rem 0 0 2rem;
  } */
 
-// ----------------
 // <!-- Veronika part end-->
-
-
 
 
 //Simona Section
@@ -1288,23 +1287,13 @@ $font-libreBaskerville: $font-libreBaskerville;
   }
 
 }
+
 //Footer
-$title-color: #f9f9f9;
-$link-color: #e4ccff;
-$font-montserrat: "Montserrat";
-
-* {
-  margin: 0;
-  font-family: $font-montserrat;
-}
-
 footer {
-  background: linear-gradient(
-    to left,
-    rgba(37, 67, 121, 1),
-    rgba(70, 95, 141, 1),
-    rgba(38, 67, 120, 0.4)
-  );
+  background: linear-gradient(to left,
+      rgba(37, 67, 121, 1),
+      rgba(70, 95, 141, 1),
+      rgba(38, 67, 120, 0.4));
   padding: 40px 20px;
   height: 300px;
 
@@ -1345,6 +1334,7 @@ footer {
           }
         }
       }
+
       .social-icons {
         a img {
           margin-right: 15px;
@@ -1352,10 +1342,10 @@ footer {
           text-decoration: none;
           transition: color 0.3s ease;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
           &:hover {
             transform: scale(1.1);
-            filter: brightness(0) saturate(100%) invert(21%) sepia(85%)
-              saturate(4588%) hue-rotate(278deg) brightness(82%) contrast(95%);
+            filter: brightness(0) saturate(100%) invert(21%) sepia(85%) saturate(4588%) hue-rotate(278deg) brightness(82%) contrast(95%);
             cursor: pointer;
           }
         }
@@ -1382,6 +1372,7 @@ footer {
         }
       }
     }
+
     .app-links {
       display: flex;
       justify-content: center;
@@ -1425,168 +1416,6 @@ footer {
       }
     }
   }
-}
-
-
-
-}
-
-@mixin media-down($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  $current: map-get($breakpoints, $name);
-  $current-max: $current - .02px;
-
-  @if $min {
-    @media (max-width: $current-max) {
-      @content;
-    }
-  }
-
-  @else {
-    @content;
-  }
-}
-
-@mixin media-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($lower, $breakpoints);
-  $max: breakpoint-max($upper, $breakpoints);
-  $current-upper: map-get($breakpoints, $upper);
-  $current-upper-max: $current-upper - .02px;
-
-  @if $min !=null {
-    @media (min-width: $min) and (max-width: $current-upper-max) {
-      @content;
-    }
-  }
-
-  @else if $min==null {
-    @include media-down($upper, $breakpoints) {
-      @content;
-    }
-  }
-}
-
-
-// Reset
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-  box-sizing: border-box;
-}
-
-html {
-  line-height: 1;
-}
-
-ul {
-  list-style: none;
-}
-
-a img {
-  border: none;
-}
-
-article,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
-
-button {
-  background: none;
-  border: none;
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &:active {
-    outline: none;
-    box-shadow: none;
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  color: initial;
-  text-decoration: none;
-}
-
-select {
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &:active {
-    outline: none;
-    box-shadow: none;
-  }
-
-}
-
-
-//Variables
-//Mixin screen sizes breakpoints
-$grid-breakpoints: ("xxs": 360px,
-  "xs": 576px,
-  "s": 768px,
-  "m":992px,
-  "l": 1024px,
-  "xl":1280px,
-  "xxl": 1400px);
-
-  //breakpoints test
-  .breakpoints-test {
-    height: 80px;
-    width: 100%;
-    color: black;
-    background-color: red;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:after {
-      content: "THE OG"
-    }
-
-    @include media-up(l) {
-      background-color: aquamarine;
-
-      &:after {
-        content: "Media-up";
-      }
-    }
-
-    @include media-down(s) {
-      background-color: purple;
-
-      &:after {
-        content: "Media-down";
-      }
-    }
-    @include media-between(s, m) {
-      background-color: yellow;
-
-      &:after {
-        content: "Media-between";
-      }
-    }
-  }
-
-
 }
 
 //Newsletter
@@ -1683,5 +1512,3 @@ $grid-breakpoints: ("xxs": 360px,
     }
   }
 }
-
-
