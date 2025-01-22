@@ -1,11 +1,17 @@
-<<<<<<< HEAD
-=======
 // @use "saas:math";
 
 //Mixins
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next(
+  $name,
+  $breakpoints: $grid-breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
   $n: index($breakpoint-names, $name);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  @return if(
+    $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
 }
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
@@ -15,11 +21,11 @@
 
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
+  @return if($next, breakpoint-min($next, $breakpoints) - 0.02px, null);
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints)==null, '', '#{$name}');
+  @return if(breakpoint-min($name, $breakpoints) ==null, "", "#{$name}");
 }
 
 // Responsive mixins
@@ -27,12 +33,10 @@
   $min: breakpoint-min($name, $breakpoints);
 
   @if $min {
-    @media(min-width: $min) {
+    @media (min-width: $min) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
@@ -40,15 +44,13 @@
 @mixin media-down($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   $current: map-get($breakpoints, $name);
-  $current-max: $current - .02px;
+  $current-max: $current - 0.02px;
 
   @if $min {
     @media (max-width: $current-max) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
@@ -57,15 +59,13 @@
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
   $current-upper: map-get($breakpoints, $upper);
-  $current-upper-max: $current-upper - .02px;
+  $current-upper-max: $current-upper - 0.02px;
 
   @if $min !=null {
     @media (min-width: $min) and (max-width: $current-upper-max) {
       @content;
     }
-  }
-
-  @else if $min==null {
+  } @else if $min==null {
     @include media-down($upper, $breakpoints) {
       @content;
     }
@@ -75,79 +75,79 @@
 //Fonts
 //Monserrat
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Thin.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Thin.woff2");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-ExtraLight.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraLight.woff2");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Light.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Light.woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Medium.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-SemiBold.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Bold.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-ExtraBold.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold.woff2");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Black.woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.woff2");
   font-weight: 900;
   font-style: normal;
 }
 
 //Libre Baskerville
 @font-face {
-  font-family: 'Libre Baskerville';
-  src: url('../fonts/LibreBaskerville-Regular.woff2');
+  font-family: "Libre Baskerville";
+  src: url("../fonts/LibreBaskerville-Regular.woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Libre Baskerville';
-  src: url('../fonts/LibreBaskerville-Bold.woff2');
+  font-family: "Libre Baskerville";
+  src: url("../fonts/LibreBaskerville-Bold.woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -222,24 +222,26 @@ select {
 
 //Variables
 //Fonts
-$font-montserrat: 'Montserrat';
-$font-libreBaskerville: 'Libre Baskerville';
+$font-montserrat: "Montserrat";
+$font-libreBaskerville: "Libre Baskerville";
 //Mixin screen sizes breakpoints
-$grid-breakpoints: ("xxs": 360px,
+$grid-breakpoints: (
+  "xxs": 360px,
   "xs": 576px,
-  "s":768px,
-  "m":992px,
+  "s": 768px,
+  "m": 992px,
   "l": 1024px,
   "l2": 1150px,
   "xl": 1280px,
-  "xxl": 1400px);
+  "xxl": 1400px,
+);
 
 header {
   font-family: $font-libreBaskerville;
   font-weight: 500;
   position: absolute;
   height: 100vh;
-  background-color: #BECFBC;
+  background-color: #becfbc;
   z-index: 28;
   border-bottom-right-radius: 30px;
   padding: 30px 15px;
@@ -260,7 +262,8 @@ header {
 
     &:hover {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(1%)
+          saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
       }
     }
   }
@@ -275,7 +278,6 @@ header {
       }
     }
   }
-
 }
 
 //Hero Shot
@@ -338,17 +340,15 @@ header {
   }
 }
 
-
 //Simona Section
 .simona-section {
-  $text-color: #61072B;
-  $background-color: #254379D9;
-  $hover-text-color: #E4CCFF;
+  $text-color: #61072b;
+  $background-color: #254379d9;
+  $hover-text-color: #e4ccff;
   $hover-background-color: #00000096;
   $font-montserrat: $font-montserrat;
   $font-libreBaskerville: $font-libreBaskerville;
   box-sizing: border-box;
-
 
   .section-title {
     text-align: center;
@@ -362,7 +362,6 @@ header {
     border-left: 470px;
     text-transform: uppercase;
   }
-
 
   .container {
     background-color: $background-color;
@@ -396,7 +395,7 @@ header {
           background-color: #000000d1;
           opacity: 0;
           cursor: pointer;
-          transition: opacity .5s ease-in-out;
+          transition: opacity 0.5s ease-in-out;
 
           p {
             font-family: $font-montserrat;
@@ -411,15 +410,12 @@ header {
         &:hover {
           .hover-text {
             opacity: 1;
-            transition: opacity .5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
           }
         }
       }
     }
-
   }
-
-
 
   .image-container h1 {
     font-family: $font-montserrat;
@@ -429,14 +425,12 @@ header {
     text-align: center;
     line-height: 33px;
     text-transform: uppercase;
-    color: #E4CCFF;
+    color: #e4ccff;
 
     &:hover {
       opacity: 59%;
-
     }
   }
-
 }
 
 .reviews-section {
@@ -465,8 +459,6 @@ header {
     transition: transform 0.3s ease;
     -ms-overflow-style: none;
     height: 460px;
-
-
   }
 
   .slider-container::-webkit-scrollbar {
@@ -474,7 +466,7 @@ header {
   }
 
   .review-card {
-    background-color: #254379D9;
+    background-color: #254379d9;
     color: #e4ccff;
     border-radius: 30px;
     min-width: 331px;
@@ -482,13 +474,11 @@ header {
     text-align: left;
     display: flex;
     flex-direction: column;
-    border: 1px solid #C796FF;
-
+    border: 1px solid #c796ff;
 
     img {
       margin: 0 auto;
       margin-top: 11px;
-
     }
 
     p {
@@ -496,15 +486,152 @@ header {
       margin: 50px 37px;
       font-size: 1rem;
       line-height: 1.6;
-      color: #E4CCFF;
+      color: #e4ccff;
       opacity: 0.9;
     }
 
     .review-name {
-      color: #BDE3FF;
+      color: #bde3ff;
       display: block;
       margin-top: -49px;
     }
   }
 }
->>>>>>> main
+//Footer
+$title-color: #f9f9f9;
+$link-color: #e4ccff;
+$font-montserrat: "Montserrat";
+
+* {
+  margin: 0;
+  font-family: $font-montserrat;
+}
+
+footer {
+  background: linear-gradient(
+    to left,
+    rgba(37, 67, 121, 1),
+    rgba(70, 95, 141, 1),
+    rgba(38, 67, 120, 0.4)
+  );
+  padding: 40px 20px;
+  height: 300px;
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 10px;
+
+      h4 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: $title-color;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            text-decoration: none;
+            color: $link-color;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: rgb(187, 0, 255);
+            }
+          }
+        }
+      }
+      .social-icons {
+        a img {
+          margin-right: 15px;
+          font-size: 20px;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          &:hover {
+            transform: scale(1.1);
+            filter: brightness(0) saturate(100%) invert(21%) sepia(85%)
+              saturate(4588%) hue-rotate(278deg) brightness(82%) contrast(95%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .connect-download {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 300px;
+      margin: 10px;
+
+      .social-icons {
+        margin-bottom: 20px;
+      }
+
+      .app-links {
+        display: flex;
+        justify-content: start;
+        gap: 15px;
+
+        a img {
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+    .app-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 15px;
+
+      a {
+        display: inline-block;
+
+        img {
+          width: 140px;
+          margin-right: 10px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+
+        .footer-section {
+          margin: 20px 0;
+        }
+
+        .connect-download {
+          align-items: center;
+        }
+
+        .app-links {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,48 +1,7 @@
 @font-face {
   font-family: "Montserrat";
-<<<<<<< HEAD
-  src: url("../fonts/Montserrat-Black.woff2");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-ExtraBold.woff2");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Light.woff2");
-  font-weight: 300;
-=======
   src: url("../fonts/Montserrat-Thin.woff2");
   font-weight: 100;
->>>>>>> main
   font-style: normal;
 }
 @font-face {
@@ -53,10 +12,6 @@
 }
 @font-face {
   font-family: "Montserrat";
-<<<<<<< HEAD
-  src: url("../fonts/Montserrat-Thin.woff2");
-  font-weight: 100;
-=======
   src: url("../fonts/Montserrat-Light.woff2");
   font-weight: 300;
   font-style: normal;
@@ -95,16 +50,11 @@
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Black.woff2");
   font-weight: 900;
->>>>>>> main
   font-style: normal;
 }
 @font-face {
   font-family: "Libre Baskerville";
-<<<<<<< HEAD
-  src: url("/fonts/LibreBaskerville-Regular.woff2");
-=======
   src: url("../fonts/LibreBaskerville-Regular.woff2");
->>>>>>> main
   font-weight: 400;
   font-style: normal;
 }
@@ -114,11 +64,7 @@
   font-weight: 700;
   font-style: normal;
 }
-<<<<<<< HEAD
-* * {
-=======
 * {
->>>>>>> main
   margin: 0;
   padding: 0;
   border: 0;
@@ -127,61 +73,65 @@
   vertical-align: baseline;
   box-sizing: border-box;
 }
-* html {
+
+html {
   line-height: 1;
 }
-* ul {
+
+ul {
   list-style: none;
 }
-* a img {
+
+a img {
   border: none;
 }
-* article,
-* footer,
-* header,
-* main,
-* nav,
-* section {
+
+article,
+footer,
+header,
+main,
+nav,
+section {
   display: block;
 }
-* button {
+
+button {
   background: none;
   border: none;
 }
-* button:focus {
+button:focus {
   outline: none;
   box-shadow: none;
 }
-* button:active {
+button:active {
   outline: none;
   box-shadow: none;
 }
-* img {
+
+img {
   max-width: 100%;
 }
-* a {
+
+a {
   color: initial;
   text-decoration: none;
 }
-* select:focus {
+
+select:focus {
   outline: none;
   box-shadow: none;
 }
-* select:active {
+select:active {
   outline: none;
   box-shadow: none;
 }
-<<<<<<< HEAD
-* .breakpoints-test {
-  height: 80px;
-=======
 
 header {
   font-family: "Libre Baskerville";
   font-weight: 500;
   position: absolute;
   height: 100vh;
-  background-color: #BECFBC;
+  background-color: #becfbc;
   z-index: 28;
   border-bottom-right-radius: 30px;
   padding: 30px 15px;
@@ -210,7 +160,6 @@ header .burger-menu .search form {
 .hero-shot {
   display: flex;
   height: 100vh;
->>>>>>> main
   width: 100%;
   position: relative;
 }
@@ -267,7 +216,7 @@ header .burger-menu .search form {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 50px;
-  color: #61072B;
+  color: #61072b;
   line-height: 75px;
   border-top: 2118px;
   border-left: 470px;
@@ -307,248 +256,11 @@ header .burger-menu .search form {
   cursor: pointer;
   transition: opacity 0.5s ease-in-out;
 }
-<<<<<<< HEAD
-* .breakpoints-test:after {
-  content: "THE OG";
-}
-@media (min-width: 1024px) {
-  * .breakpoints-test {
-    background-color: aquamarine;
-  }
-  * .breakpoints-test:after {
-    content: "Media-up";
-  }
-}
-@media (max-width: 767.98px) {
-  * .breakpoints-test {
-    background-color: purple;
-  }
-  * .breakpoints-test:after {
-    content: "Media-down";
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  * .breakpoints-test {
-    background-color: yellow;
-  }
-  * .breakpoints-test:after {
-    content: "Media-between";
-  }
-}
-* * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-  box-sizing: border-box;
-}
-* html {
-  line-height: 1;
-}
-* ul {
-  list-style: none;
-}
-* a img {
-  border: none;
-}
-* article,
-* footer,
-* header,
-* main,
-* nav,
-* section {
-  display: block;
-}
-* button {
-  background: none;
-  border: none;
-}
-* button:focus {
-  outline: none;
-  box-shadow: none;
-}
-* button:active {
-  outline: none;
-  box-shadow: none;
-}
-* img {
-  max-width: 100%;
-}
-* a {
-  color: initial;
-  text-decoration: none;
-}
-* select:focus {
-  outline: none;
-  box-shadow: none;
-}
-* select:active {
-  outline: none;
-  box-shadow: none;
-}
-* .breakpoints-test {
-  height: 80px;
-  width: 100%;
-  color: black;
-  background-color: red;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-* .breakpoints-test:after {
-  content: "THE OG";
-}
-@media (min-width: 1024px) {
-  * .breakpoints-test {
-    background-color: aquamarine;
-  }
-  * .breakpoints-test:after {
-    content: "Media-up";
-  }
-}
-@media (max-width: 767.98px) {
-  * .breakpoints-test {
-    background-color: purple;
-  }
-  * .breakpoints-test:after {
-    content: "Media-down";
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  * .breakpoints-test {
-    background-color: yellow;
-  }
-  * .breakpoints-test::after {
-    content: "Media-between";
-  }
-}
-* header {
-  font-family: "Montserrat";
-  font-weight: 700;
-}
-* header .burger-btn:hover img {
-  filter: brightness(0) saturate(100%) invert(99%) sepia(56%) saturate(57%) hue-rotate(205deg) brightness(113%) contrast(89%);
-}
-* .simona-section {
-  box-sizing: border-box;
-}
-* .simona-section .section-title {
-  text-align: center;
-  height: 75px;
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 50px;
-  color: #61072B;
-  line-height: 75px;
-  border-top: 2118px;
-  border-left: 470px;
-  text-transform: uppercase;
-}
-* .simona-section .container {
-  background-color: rgba(37, 67, 121, 0.8509803922);
-  border-radius: 30px 30px 150px 30px;
-  height: 673px;
-  width: 1210px;
-  display: flex;
-  margin-left: 140px;
-  margin-right: 120px;
-}
-* .image-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 20px 20px 20px 20px;
-}
-* .image-container h1 {
-  font-family: "Montserrat";
-  text-align: center;
-  font-weight: 600;
-  font-size: 22px;
-  text-align: center;
-  line-height: 33px;
-  text-transform: uppercase;
-  color: #E4CCFF;
-}
-* .image-container h1:hover {
-  opacity: 59%;
-}
-
-.logo-one {
-  width: 307.46px;
-  height: 307.46px;
-  top: 30px;
-  left: 20px;
-}
-.logo-one:hover {
-  filter: blur(5px);
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.hover-text:hover {
-  opacity: 1;
-}
-
-.logo-two {
-  width: 307.46px;
-  height: 307.46px;
-  top: 20px;
-  left: 20px;
-}
-.logo-two:hover {
-  filter: blur(5px);
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.logo-three {
-  width: 452.15px;
-  height: 307.46px;
-  top: 20px;
-  left: 20px;
-}
-.logo-three:hover {
-  filter: blur(5px);
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.logo-four {
-  width: 717.41px;
-  height: 180.11px;
-  top: 20px;
-  left: 20px;
-  margin-top: -70px;
-}
-.logo-four:hover {
-  filter: blur(5px);
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.logo-five {
-  width: 382.07px;
-  height: 180.11px;
-  top: 20px;
-  left: 20px;
-  margin-top: -70px;
-}
-.logo-five:hover {
-  filter: blur(5px);
-  transition: 0.3s ease;
-  cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
-=======
 .simona-section .container .image-container .logo-partner .hover-text p {
   font-family: "Montserrat";
   font-size: 22px;
   font-weight: 600;
-  color: #E4CCFF;
+  color: #e4ccff;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -564,7 +276,7 @@ header .burger-menu .search form {
   text-align: center;
   line-height: 33px;
   text-transform: uppercase;
-  color: #E4CCFF;
+  color: #e4ccff;
 }
 .simona-section .image-container h1:hover {
   opacity: 59%;
@@ -608,7 +320,7 @@ header .burger-menu .search form {
   text-align: left;
   display: flex;
   flex-direction: column;
-  border: 1px solid #C796FF;
+  border: 1px solid #c796ff;
 }
 .reviews-section .review-card img {
   margin: 0 auto;
@@ -619,20 +331,117 @@ header .burger-menu .search form {
   margin: 50px 37px;
   font-size: 1rem;
   line-height: 1.6;
-  color: #E4CCFF;
+  color: #e4ccff;
   opacity: 0.9;
 }
 .reviews-section .review-card .review-name {
-  color: #BDE3FF;
-<<<<<<< HEAD
-}
->>>>>>> main
-=======
+  color: #bde3ff;
   display: block;
   margin-top: -49px;
-<<<<<<< HEAD
-}/*# sourceMappingURL=main.css.map */
->>>>>>> main
-=======
 }
->>>>>>> main
+
+* {
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+footer {
+  background: linear-gradient(to left, rgb(37, 67, 121), rgb(70, 95, 141), rgba(38, 67, 120, 0.4));
+  padding: 40px 20px;
+  height: 300px;
+}
+footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+footer .footer-container .footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+footer .footer-container .footer-section h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+footer .footer-container .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footer-container .footer-section ul li {
+  margin-bottom: 10px;
+}
+footer .footer-container .footer-section ul li a {
+  text-decoration: none;
+  color: #e4ccff;
+  transition: color 0.3s ease;
+}
+footer .footer-container .footer-section ul li a:hover {
+  color: rgb(187, 0, 255);
+}
+footer .footer-container .footer-section .social-icons a img {
+  margin-right: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+footer .footer-container .footer-section .social-icons a img:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(85%) saturate(4588%) hue-rotate(278deg) brightness(82%) contrast(95%);
+  cursor: pointer;
+}
+footer .footer-container .connect-download {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+  margin: 10px;
+}
+footer .footer-container .connect-download .social-icons {
+  margin-bottom: 20px;
+}
+footer .footer-container .connect-download .app-links {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+}
+footer .footer-container .connect-download .app-links a img {
+  transition: transform 0.3s ease;
+}
+footer .footer-container .app-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+footer .footer-container .app-links a {
+  display: inline-block;
+}
+footer .footer-container .app-links a img {
+  width: 140px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+footer .footer-container .app-links a img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  footer footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer footer .footer-container .footer-section {
+    margin: 20px 0;
+  }
+  footer footer .footer-container .connect-download {
+    align-items: center;
+  }
+  footer footer .footer-container .app-links {
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=main.css.map */
