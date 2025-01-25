@@ -1,3 +1,5 @@
+@import "main.scss";
+
 .variant1 {
 	justify-content: center;
 	overflow: hidden;
@@ -13,9 +15,10 @@
 		position: relative;
 		z-index: 5;
 		left: 100px;
-	 top: 5px;
+		top: 5px;
 		height: 590px !important;
 		width: 320px;
+
 		#i1 {
 			width: 320px;
 			height: 540px;
@@ -58,18 +61,20 @@
 		top: 80px;
 		width: 260px;
 		// bottom: 200px;
-		height: 100px ;
+		height: 100px;
 		height: 100%;
-#i3 {
-height: 400px;
-}
-&:hover .hover-part img {
-opacity: 1;
-}
 
-&:hover .hover-part2 p {
-display: block;
-}
+		#i3 {
+			height: 400px;
+		}
+
+		&:hover .hover-part img {
+			opacity: 1;
+		}
+
+		&:hover .hover-part2 p {
+			display: block;
+		}
 	}
 
 	#img-4 {
@@ -126,7 +131,7 @@ display: block;
 
 		p {
 			opacity: 1;
-			display: none ;
+			display: none;
 			font-family: $font-libreBaskerville;
 			font-weight: 600;
 			position: relative;
@@ -143,6 +148,7 @@ display: block;
 		}
 	}
 }
+
 .slide-circle {
 	margin: 30px 0 20px;
 	display: flex;
