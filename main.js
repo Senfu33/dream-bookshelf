@@ -1,11 +1,11 @@
 //Declaring variable with const
-const breakpointsTest = document.querySelector('.breakpoints-test');
-console.log(breakpointsTest)
+// const breakpointsTest = document.querySelector('.breakpoints-test');
+// console.log(breakpointsTest)
 // Declaring variable with let
-let welcomeStudents = document.getElementById('welcomeStudents');
-console.log(welcomeStudents.innerHTML + "From the Console");
+// let welcomeStudents = document.getElementById('welcomeStudents');
+// console.log(welcomeStudents.innerHTML + "From the Console");
 //Changing html with js
-setTimeout(function() {welcomeStudents.innerHTML = "Changing text from JS"}, 5000)
+// setTimeout(function() {welcomeStudents.innerHTML = "Changing text from JS"}, 5000)
 
 const sliderContainer = document.querySelector('.slider-container');
 window.onscroll = () => {
@@ -106,3 +106,15 @@ window.onscroll = () => {
 // nextItem.addEventListener('click', showNextItem);
 // previousItem.addEventListener('click', showPreviousItem);
 // document.addEventListener('keydown', keyPress);
+
+const bookCard = document.querySelectorAll('.book-card');
+const radioBtn = document.querySelectorAll('.radio-btn');
+
+for (const [i] of radioBtn.entries()) {
+    radioBtn[i].addEventListener('click', (e) => {
+        bookCard.forEach((book) => book.classList.remove('book-in-focus'));
+        bookCard[i].classList.add('book-in-focus');
+        radioBtn.forEach((radio) => radio.classList.remove('radio-on'));
+        radioBtn[i].classList.add('radio-on');
+    })
+}
