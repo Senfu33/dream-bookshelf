@@ -118,3 +118,15 @@ for (const [i] of radioBtn.entries()) {
         radioBtn[i].classList.add('radio-on');
     })
 }
+
+const burgerBtn = document.querySelector('.burger-btn')
+const header = document.querySelector('.header')
+const overlay = document.querySelector('.overlay')
+
+burgerBtn.addEventListener("click", () => {
+    header.classList.toggle('js-header')
+});
+
+overlay.addEventListener('click', () => {
+header.classList.remove('js-header')
+});
