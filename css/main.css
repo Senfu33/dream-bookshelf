@@ -139,12 +139,17 @@ header {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 header .logo {
   display: flex;
   justify-content: center;
   max-width: 50px;
+  width: 100%;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
 }
 header .burger-btn {
   margin: 30px 0;
@@ -158,6 +163,50 @@ header .burger-btn #close-burger {
 }
 header .burger-btn:hover img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(3057%) hue-rotate(246deg) brightness(112%) contrast(89%);
+}
+header .burger-btn-spans {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+header .burger-btn-spans span {
+  height: 4px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #61072B;
+  display: block;
+  position: absolute;
+  margin: 2.5px 0;
+}
+header .burger-btn-spans span#s1 {
+  width: 50%;
+  right: 0;
+  top: 0;
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.19, 0.43, 0.37, 1);
+  transform-origin: right;
+}
+header .burger-btn-spans span#s2, header .burger-btn-spans span#s3 {
+  top: 10px;
+  transform: rotate(0);
+  transition: transform 0.5s ease-in-out;
+}
+header .burger-btn-spans span#s4 {
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.19, 0.43, 0.37, 1);
+  transform-origin: left;
+}
+header .burger-btn-spans:hover span {
+  background-color: #254379;
+  transition: background-color 0.5s ease-in-out;
 }
 header .burger-menu {
   display: flex;
@@ -173,6 +222,7 @@ header .burger-menu {
   color: #fff;
   text-transform: uppercase;
   opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 header .burger-menu nav {
   display: flex;
@@ -219,12 +269,45 @@ header ~ .overlay {
   top: 0;
   left: 0;
   z-index: 27;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 header.js-header {
   max-width: 450px;
   width: 100%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+header.js-header .burger-btn-spans span#s1 {
+  width: 50%;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.19, 0.43, 0.37, 1);
+  transform-origin: right;
+}
+header.js-header .burger-btn-spans span#s2 {
+  top: 10px;
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+}
+header.js-header .burger-btn-spans span#s3 {
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease-in-out;
+}
+header.js-header .burger-btn-spans span#s4 {
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.19, 0.43, 0.37, 1);
+  transform-origin: left;
+}
+header.js-header .burger-btn-spans:hover span {
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+header.js-header .burger-btn-spans:hover span#s2, header.js-header .burger-btn-spans:hover span#s3 {
+  background-color: #254379;
 }
 header.js-header .burger-btn #open-burger {
   display: none;
@@ -234,64 +317,40 @@ header.js-header .burger-btn #close-burger {
 }
 header.js-header .burger-menu {
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 header.js-header ~ .overlay {
   width: 100vw;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .hero-shot {
   display: flex;
-  height: 100vh;
-  width: 100%;
+  height: calc(100vh - 30px);
+  width: calc(100vw - 70px);
   position: relative;
+  background-image: url(../images/hero-shot-background.png);
+  background-repeat: no-repeat;
+  background-position: 100% 15%;
+  margin-left: auto;
+  background-size: 80%;
+  align-items: end;
+  margin-bottom: 30px;
 }
-.hero-shot .hero-content {
+.hero-shot #girl-decoration {
+  height: 55%;
   width: auto;
+  margin-left: 10%;
 }
-.hero-shot #bg-rectangle,
-.hero-shot #group-1,
-.hero-shot #group-2,
-.hero-shot #free-book,
-.hero-shot #wherever,
-.hero-shot #vector {
+.hero-shot .account {
   position: absolute;
-  z-index: 1;
-}
-.hero-shot #bg-rectangle {
-  top: 0;
-  right: 0;
-  height: auto;
-  top: 15px;
-  right: 10px;
-}
-.hero-shot #group-1 {
-  top: 220px;
-  right: 10px;
-}
-.hero-shot #group-2 {
-  left: 20px;
-  top: 400px;
-}
-.hero-shot #free-book {
-  top: 150px;
-  left: 240px;
-}
-.hero-shot #wherever {
-  top: 230px;
-  left: 320px;
-}
-.hero-shot #vector {
-  top: 30px;
-  right: 30px;
-  transition: transform 0.5s;
-}
-.hero-shot #vector:hover {
-  transform: rotate(360deg) scale(1.2);
+  right: 3vw;
+  top: 5vh;
 }
 
 .banner {
   margin: 50px 0;
+  overflow: hidden;
 }
 .banner .banner-track {
   animation: scroll 15s linear infinite;

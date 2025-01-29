@@ -119,14 +119,21 @@ for (const [i] of radioBtn.entries()) {
     })
 }
 
-const burgerBtn = document.querySelector('.burger-btn')
+const burgerBtn = document.querySelector('.burger-btn-spans')
 const header = document.querySelector('.header')
 const overlay = document.querySelector('.overlay')
+const body = document.body;
 
 burgerBtn.addEventListener("click", () => {
-    header.classList.toggle('js-header')
+    header.classList.toggle('js-header');
+    if(header.classList.contains('js-header')) {
+        body.style.overflow="hidden";
+    } else {
+        body.style.overflow="auto";
+    }
 });
 
 overlay.addEventListener('click', () => {
-header.classList.remove('js-header')
+    header.classList.remove('js-header')
+    body.style.overflow="auto";
 });
