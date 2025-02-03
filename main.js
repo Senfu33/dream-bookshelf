@@ -1,3 +1,4 @@
+import MenuData from '/burger-menu.js';
 //Declaring variable with const
 // const breakpointsTest = document.querySelector('.breakpoints-test');
 // console.log(breakpointsTest)
@@ -126,14 +127,46 @@ const body = document.body;
 
 burgerBtn.addEventListener("click", () => {
     header.classList.toggle('js-header');
-    if(header.classList.contains('js-header')) {
-        body.style.overflow="hidden";
+    if (header.classList.contains('js-header')) {
+        body.style.overflow = "hidden";
     } else {
-        body.style.overflow="auto";
+        body.style.overflow = "auto";
     }
 });
 
 overlay.addEventListener('click', () => {
     header.classList.remove('js-header')
-    body.style.overflow="auto";
+    body.style.overflow = "auto";
 });
+
+console.log(MenuData);
+const navMenu = document.querySelector('.menu-data');
+navMenu.innerHTML = '';
+const currentElement = MenuData;
+console.log(currentElement);
+let currentElementHtml = '';
+for (let i = 0; i < currentElement.length; i++) {
+    console.log(i)
+    if (currentElement[i].subMenuLinks == undefined) {
+        // console.log(i + "has no links")
+        currentElementHtml += `
+       <a href="${currentElement[i].menuLink}">${currentElement[i].menuName}</a>
+       `
+    } else {
+        currentElementHtml += `
+        <a href="${currentElement[i].menuLink}">${currentElement[i].menuName}</a>
+        <ul>
+        `
+        for (let y = 0; y < currentElement[i].subMenuLinks.length; y++) {
+            currentElementHtml += `
+            <li>
+                <a href="${currentElement[i].subMenuLinks[y].subLink}">${currentElement[i].subMenuLinks[y].menuSubname}</a>
+            </li>
+            `
+        }
+        currentElementHtml += `
+        </ul>
+        `
+    }
+}
+navMenu.innerHTML += currentElementHtml;
