@@ -361,16 +361,47 @@ header {
 
     nav {
       display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
       margin-top: 30px;
       gap: 30px;
+      overflow: auto;
+      height: 60vh;
+
+      a {
+        font-family: $font-libreBaskerville;
+        font-weight: 700;
+        font-size: 34px;
+        letter-spacing: 1px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:first-of-type {
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent;
+          background: linear-gradient(48deg, rgba(97, 7, 43, 1) 15%, #c70e58 70%);
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          a {
+            font-size: 20px;
+            color: #c70e58;
+          }
+        }
+      }
 
       .active {
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent;
-        background: linear-gradient(48deg, rgba(97, 7, 43, 1) 15%, rgba(199, 14, 88, 1) 70%);
+        background: linear-gradient(48deg, rgba(97, 7, 43, 1) 15%, #c70e58 70%);
       }
     }
 
@@ -444,7 +475,7 @@ header {
         &#s4 {
           width: 50%;
           left: 0;
-          bottom: 0;
+          bottom: -30px !important;
           transform: scaleX(0);
           transition: transform .5s cubic-bezier(0.19, 0.43, 0.37, 1);
           transform-origin: left;
@@ -1566,7 +1597,9 @@ header {
   }
 
   .slider-container::-webkit-scrollbar {
-    display: none;
+    //display: none;
+    background-color: transparent;
+    //height: 460px;
   }
 
   .review-card {
